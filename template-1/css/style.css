@@ -1,3 +1,154 @@
+:root {
+  --color-bg-dark: #260941;
+  --color-bg-light: #7F4AB4;
+  --color-text-light: #ffffff;
+  --color-btn: #7F4AB4;
+  --color-btn-hover: #78C2E5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: mediumpurple;
+  color: var(--color-text-light);
+  font-family: 'Noto Sans Symbols', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: var(--color-text-light);
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: var(--color-bg-dark);
+}
+
+.header__inner {
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.menu__link:hover {
+  border-bottom: 1px solid var(--color-btn-hover);
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.user-actions__button {
+  background-color: var(--color-btn);
+  padding: 8px 32px;
+  border-radius: 40px;
+}
+
+.user-actions__button:hover {
+  background-color: var(--color-btn-hover);
+  transition: .4s linear;
+}
+
+.user-actions li:nth-child(3) {
+  margin-left: 80px;
+}
+
+.hero {
+  background-image: url(../images/img-hero.jpg);
+  background-repeat: repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.hero__inner {
+  min-height: 680px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__title {
+  font-family: 'Noto Serif', serif;
+  font-size: 64px;
+  max-width: 960px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.hero__description {
+  font-size: 18px;
+  max-width: 520px;
+  line-height: 1.8;
+}
+
+.quote {
+  display: flex;
+  height: 420px;
+  background-color: var(--color-bg-light);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quote__text {
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-size: 32px;
+  max-width: 760px;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.quote__text::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/quote.svg);
+  height: 40px;
+  width: 40px;
+}
+
+.quote__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quote__photo {
+  width: 64px;
+  height: 64px;
 }
