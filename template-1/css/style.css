@@ -2,7 +2,8 @@
   --color-bg-dark: #260941;
   --color-bg-light: #7F4AB4;
   --color-text-light: #ffffff;
-  --color-btn: #7F4AB4;
+  --color-btn-primary: #7F4AB4;
+  --color-btn-secondary: #260941;
   --color-btn-hover: #78C2E5;
 }
 
@@ -79,15 +80,20 @@ a {
   gap: 64px;
 }
 
-.user-actions__button {
-  background-color: var(--color-btn);
-  padding: 8px 32px;
+.button {
+  display: flex;
+  padding: 12px 32px;
   border-radius: 40px;
+  white-space: nowrap;
+}
+
+.user-actions__button {
+  background-color: var(--color-btn-primary);
 }
 
 .user-actions__button:hover {
   background-color: var(--color-btn-hover);
-  transition: .4s linear;
+  transition: .4s ease-in-out;
 }
 
 .hero {
@@ -120,6 +126,16 @@ a {
   font-size: 18px;
   max-width: 520px;
   line-height: 1.8;
+}
+
+.hero__button {  
+  background-color: var(--color-btn-secondary);
+  box-shadow: 0px 0px 148px 32px rgba(196,46,255,0.9);
+}
+
+.hero__button:hover {
+  background-color: var(--color-btn-hover);
+  transition: .4s ease-in-out;
 }
 
 .quote {
@@ -245,9 +261,32 @@ a {
 }
 
 @media (max-width: 480px) {
+  .user-actions {
+    gap: 0;
+  }
+  
+  .user-actions__link {
+    display: none;
+  }
 
+  .hero__description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+  .hero__title {
+    font-size: 32px;
+    max-width: 680px;
+  }
 
+  .quote {
+    padding: 0 10px;
+  }
+
+  .quote__text {
+    font-size: 20px;
+    line-height: 1.6;
+  }
 }
