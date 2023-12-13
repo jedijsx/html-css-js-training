@@ -29,6 +29,7 @@ a {
   font-size: 14px;
   text-transform: capitalize;
   color: var(--color-text-light);
+  transition-duration: .4s;
 }
 
 .container {
@@ -42,10 +43,15 @@ a {
 }
 
 .header__inner {
-  min-height: 120px;
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo__img {
+  height: 56px;
+  width: 56px;
 }
 
 .menu__button {
@@ -69,11 +75,7 @@ a {
   gap: 56px;
 }
 
-.menu__link:hover {
-  border-bottom: 1px solid var(--color-btn-hover);
-}
-
-.user-actions {
+.menu__actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,18 +84,14 @@ a {
 
 .button {
   display: flex;
-  padding: 12px 32px;
-  border-radius: 40px;
+  padding: 10px 32px;
+  border-radius: 8px;
   white-space: nowrap;
+  transition-duration: .8s;
 }
 
-.user-actions__button {
+.actions__button {
   background-color: var(--color-btn-primary);
-}
-
-.user-actions__button:hover {
-  background-color: var(--color-btn-hover);
-  transition: .4s ease-in-out;
 }
 
 .hero {
@@ -131,11 +129,6 @@ a {
 .hero__button {  
   background-color: var(--color-btn-secondary);
   box-shadow: 0px 0px 148px 32px rgba(196,46,255,0.9);
-}
-
-.hero__button:hover {
-  background-color: var(--color-btn-hover);
-  transition: .4s ease-in-out;
 }
 
 .quote {
@@ -181,10 +174,24 @@ a {
   height: 64px;
 }
 
+/* hovers */
+
+.menu__link:hover {
+  color: var(--color-btn-hover);
+}
+
+.actions__button:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.hero__button:hover {
+  background-color: var(--color-btn-hover);
+}
+
 /* media queries */
 
 @media (max-width: 1024px) {
-  .user-actions {
+  .menu__actions {
     gap: 40px;
   }
 
@@ -255,17 +262,17 @@ a {
     text-align: center;
   }
 
-  .user-actions {
+  .menu__actions {
     flex: 1;
   }
 }
 
 @media (max-width: 480px) {
-  .user-actions {
+  .menu__actions {
     gap: 0;
   }
   
-  .user-actions__link {
+  .actions__link {
     display: none;
   }
 
@@ -276,6 +283,23 @@ a {
 }
 
 @media (max-width: 375px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .header__inner {
+    min-height: 64px;
+  }
+  
+  .logo__img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .actions__button {
+    padding: 8px 24px;
+  }
+
   .hero__title {
     font-size: 32px;
     max-width: 680px;
