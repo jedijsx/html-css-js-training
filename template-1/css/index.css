@@ -1,0 +1,12 @@
+/* global */
+@import url('reset.css');
+@import url('box-model.css');
+
+/* colors */
+@import url('colors.css');
+
+/* main */
+@import url('styles.css');
+
+/* media queries */
+@import url('media.css');
